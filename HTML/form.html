@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="request.php" method="post">
+    <label for="name">Name</label>
+    <input type="text" name="stu-name" id="name" required placeholder="Enter name"><br><br>
+    <label for="email">Email</label>
+    <input type="email" name="stu-email" id="email"><br><br>
+    <label for="password">Password</label>
+    <input type="password" name="stu-password" id="password"><br><br>
+    <label for="phone">Phone</label>
+    <input type="number" name="stu-phone" id="phone"><br><br>
+    <label for="passport">Passsport</label>
+    <input type="file" accept=".png,.jpg,.mp4" name="stu-pass" id="passport"><br><br>
+    <label for="">Gender</label><br>
+    <input type="radio" name="gender" id="male" value="male">
+    <label for="male">Male</label>
+    <input type="radio" name="gender" id="female">
+    <label for="female">Female</label>
+    <input type="radio" name="gender" id="other" value="other">
+    <label for="other">Other</label>
+    <br><br>
+    <label for="">Hobby</label>
+    <input type="checkbox" name="reading" value="reading" id="reading"><label for="">Reading</label>
+    <input type="checkbox" name="travelling" id="travelling" value="travelling"><label for="">Travelling</label>
+    <input type="checkbox" name="gaming" id="gaming" value="gaming"><label for="">Gaming</label><br>
+    <label for="">Years</label>
+    <select name="year" id="">
+        <option value="first">First Year</option>
+        <option value="second">Second Year</option>
+        <option value="third">Third Year</option>
+    </select><br>
+    <label for="dob">Birthday</label>
+    <input type="date" name="stu-date" id="dob"><br>
+    <label for="address">Address</label>
+    <textarea name="address" id="address" cols="30" rows="10"></textarea><br>
+    <input type="time" name="" id=""><br>
+    <input type="date time-lacal" name="" id="">
+    <input type="color" name="color" id=""><br>
+    <input type="range" name="range" id="" min="" max="" value=""><br>
+    <button>Submit</button>
+</form>
+    
+</body>
+</html>
