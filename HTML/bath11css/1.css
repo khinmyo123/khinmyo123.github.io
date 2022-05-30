@@ -1,0 +1,14 @@
+div{color: blueviolet;
+line-height: 10px;}
+#ooo{color: blue;
+letter-spacing: 10px;}
+.ppp{color: yellow;}
+p a{color: blueviolet;
+letter-spacing: 10px;}
+p >a{color: aqua;word-spacing: 10px;}
+a:link{color: rgb(0, 255, 85);}
+a:hover{color: red;}
+a:active{color: blueviolet;}
+a:visited{color: aqua;}
+a[title="blank"]{color: red;}
+li:nth-child(3){color: brown;}

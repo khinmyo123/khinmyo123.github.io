@@ -1,0 +1,429 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+@font-face {font-family: lobster;
+    
+    src: url(../lobster/lobster/SmoochSans-VariableFont_wght.ttf);
+}
+.logo{
+    width: 100px;
+    height: 70px;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+.nav-brand{
+    display: inline-block;
+}
+.brand-name{
+    
+    position: relative;
+    top:-60px;
+    left:85px;
+    font-family:lobster ;
+    font-size: 20px;
+}.header-div{clear: both;}
+
+.navbar ul{
+    float: right;
+}
+
+.navbar ul li{display: inline-block;
+    margin-right: 40px;
+margin-top: 30px;}
+
+.navbar ul li a{
+    text-decoration:none ;
+    color: black;
+    text-transform:uppercase ;
+}
+.navbar ul li a:hover{color:royalblue;
+letter-spacing: 4px;
+transition-duration:5s ;}
+.cart{
+    position: relative;
+    top: -15px;
+    background-color: black;
+    color: white;
+    padding: 0px 7px;
+    border-radius: 50%;
+
+}
+.img{
+    width: 100%;
+}
+.background-text{
+    position: absolute;
+    top: 250px;
+    left: 100px;
+}
+.perfect{font-family: lobster;
+    font-weight:unset;
+    margin-bottom: 15px;
+
+}
+.shop{
+    border: 1px solid #3997bf;
+    padding: 10px 20px ;
+    border-radius: 4px;
+    margin-top: 15px;
+    colour:#3997bf;
+}
+.shop:hover{
+    background-color: #3997bf;
+    color: white;
+    cursor: pointer;
+}
+.product-header{
+    text-align: center;
+    margin-top: 50px;
+}.divided{max-width: 100px;
+margin: auto;
+border: 1px solid #3997bf ;
+}
+.product{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-left: 50px;
+    margin-right:50px ;
+    grid-gap: 40px;
+    text-align: center;
+}
+.product-img{width: 100%;
+border-radius: 5px;
+box-shadow: 0 10px 20 px rgb(0,0,0,.18);}
+.add-to-cart{border-radius: 20px;
+padding: 13px 23px;
+border: 0px;
+background-color: #e2eaec;}
+.add-to-cart:hover{cursor: pointer;}
+.discount{text-decoration: line-through;
+font-size: smaller;
+color: red;}
+.about{background-image:url(../images/21.png) ;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+.about div{line-height:20px ;
+padding: 50px;}
+.divid{width: 40px;
+margin: auto;
+margin-top: 15px;
+margin-bottom:15px;}
+
+.packaging{margin-top: 50px;
+    margin-left: 80px;}
+    .packaging .packaging-img{
+        border-radius:5px;
+        width: 40%;
+        float: left;
+    }
+.packaging div{ position:relative;
+left:50px;
+width: 80%;}
+.header-packaging{
+    margin-top: 30px;
+}
+.fa-solid fa-circle-arrow-right{
+    display:inline-block ;
+    padding-right:20px ;
+}
+.clear{
+    clear: both;
+}
+.support-text{display: inline-block;}
+.support{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-top: 50px;
+    background-color: #e2eaec;
+    padding: 30px;
+    padding-left: 70px;
+}
+.support-icon{
+    padding-right: 20px;
+}
+.support-header{font-size: 20px;
+font-weight: bold;}
+.footer-center{width: 430px;
+    margin: auto;
+    padding-top: 60px;
+
+}
+.footer-center a{
+    margin:0px 20px ;
+    text-decoration: none;
+    color: white;
+}
+.footer{background-color: rgb(40,39,39);}
+.designed-by{text-align: center;
+color: white;
+padding: 20px 0px;}
+.social-icon{
+    text-align: center;
+    padding-bottom:60px ;
+}
+.touch h2{padding: 20px;}
+.touch{width: 40%;
+    height: 650px;
+    margin-left: 20px;
+    border-style: solid;
+    border-width: 1px;
+    padding:20px;
+    background-color:aliceblue;
+}
+.touch h3{font: size 10px;
+    font-weight: 100;
+    text-align: center;
+    
+}
+.contact{width: 300px;
+    margin: auto;
+    margin: 50px 50px;
+    
+}
+
+
+.touch .phone-no{margin-top: 50px;}
+.header-contact{border-style: solid;
+border: none;
+margin: bottom 100px; 
+}
+ .header-chat{text-indent: 50px;}
+.chat{position: absolute;
+    left: 500px;
+    top: 107px;height: 610px;
+}
+    
+form{display: inline-block;
+    width: 82%;
+margin-top: 20px;}
+input[type="text"]:focus,input[type="Email"]:focus{
+    border: 3px solid #3997bf;
+}
+input[type="text"],input[type="Email"]{width: 100%;
+height: 40px;outline: none;line-height:12px;
+}
+#comment{width: 100%;}
+#comment:focus{border: 3px solid #3997bf;}
+.header-send{width: 40%;
+height: 40px;
+margin: auto;
+color: aqua;}
+.header-send:focus{
+    border: 3px solid #3997bf;
+}.chat{width: 50%;
+   padding: 40px;
+    border-style: solid;
+    border-width: 1px;
+   background-color: aliceblue;
+}.header-float{clear: both;}
+.header-bouquet{float: left;
+border-radius: 5px;
+width: 100%;
+}
+.emotion{font-family:lobster ;
+    position: absolute;
+    top: 300px;
+    left: 600px;
+    line-height: 50px;
+}.header-div{
+    clear: both;
+}
+
+.header-bouquetone{background-image: url(../images/r20.png);
+    
+    padding: 10px;
+width:15%;
+height: 30px;
+margin: auto;}
+.header-source{
+    font-family: lobster;
+    text-align: center;
+    background-image:url(../images/rose3.png); 
+    padding: 10px;
+width:15%;
+height: 30px;
+margin: auto;
+margin-top: 50px;
+}
+.header-img{margin-top: 60px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-left: 50px;
+    margin-right:50px ;
+    grid-gap: 40px;
+    text-align: center;
+}
+.header-img .product-img{width: 100%;
+    border-radius: 5px;
+    width: 70%;
+    height: 150px;
+    box-shadow: 0 10px 20 px rgb(0,0,0,.18);}
+
+
+    .header-img .add-to-cart{border-radius: 20px;
+        padding: 13px 23px;
+        border: 0px;
+        background-color: #e2eaec;}
+        .add-to-cart:hover{cursor: pointer;}
+
+        .headerrose{
+            position: absolute;
+            right:500px;
+            top: 1100px;
+        
+        }
+        .header-div{
+            clear: both;
+        }
+        .header-rose{
+            width: 100%;
+            height: 300px;
+        }
+       .header-mother{display: grid;
+        grid-template-columns: auto auto;
+           margin-top: 60px;
+       }
+       .header-shopnow{ position: absolute;
+        left:150px;
+        top: 1200px;}
+       .header-storyone{margin:40px 0px;
+           font-family: lobster;
+           line-height: 20px;
+           word-spacing: 7px;
+           text-indent: 20px;
+           text-align: center;
+       }.header-mession{float: right;}
+       .header-missionone{border: solid;
+           border-style: 1px solid #3997bf;
+           border-radius: 35px;
+           padding: 30px 30px;
+           margin-top: 34px;
+           background-color: #3997bf;
+       }.header-div{clear: both;}
+       .header-ga{text-align: center;}
+       .header-galleryone{margin-bottom: 100px;}
+.header-gallery{display: grid;
+grid-template-columns: auto auto auto auto;}
+.header-gallery img{width: 100%;
+    border-radius: 5px;
+    width: 70%;
+    height: 150px;
+    box-shadow: 0 10px 20 px rgb(0,0,0,.18);}
+       .header-missionzero{border-style: 1px solid #3997bf;
+        border-radius: 35px;
+        border: solid;
+        background-color: #3997bf;
+        padding: 30px 30px;
+    }
+    .header-mession{position: relative;
+    right: 150px;}
+       .header-messiontwo{margin-top: 20px;}
+       
+       .header-story{text-align: center;
+    font-family: lobster;
+margin-top: 50px;}
+    .header-blog{
+        text-align: center;
+        
+    }
+   
+.header-sep{
+    margin-top: 50px;
+}
+.fa-regular fa-calendar-days{display: inline-block;
+    padding-right: 100px;
+}
+.header-blog{font-family: lobster;
+    text-align: center;
+    background-image:url(../images/rose3.png); 
+    padding: 10px;
+width:15%;
+height: 30px;
+margin: auto;
+margin-top: 50px;
+margin-bottom:20px ;}
+.header-sepone{font-family: lobster;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.header-septwo{text-indent: 15px;
+font-family: lobster;}
+.header-romatic{background-image: url(../images/r20.png);
+ padding: 10px;
+width:20%;
+height: 30px;
+margin: auto;
+margin-top: 50px;
+margin-bottom:20px ;}
+.header-romaticone{background-image: url(../images/r20.png);padding: 10px;
+    width:15%;
+    height: 30px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom:20px ;
+}
+.header-wedding{display: grid;
+grid-template-columns: auto auto;
+}
+.header-wedding img{width: 100%;
+    border-radius: 5px;box-shadow: 0 10px 20 px rgb(0,0,0,.18);
+    height: 400px;
+    
+}
+.shoot,.shootone{margin: 30px 0px;
+    text-align: center;
+color: #3997bf;}
+.shootone span{color: green;}
+.shoottwo{text-align: center;
+word-spacing: 5px;
+font-family: lobster;
+font-size: 30px;
+margin-bottom: 50px;}
+
+.bouquet-img{
+    width: 10%;
+    height: 100px;
+    padding:50px 500px;
+}
+.header-summer{display: grid;
+grid-template-columns: auto auto;}
+.header-summer img{width: 100%;
+    border-radius: 5px;box-shadow: 0 10px 20 px rgb(0,0,0,.18);
+    height: 400px;
+    }
+.header-summer.shootone {margin-bottom: 70px;}
+.header-covid .shootone{margin-bottom: 70px;}
+.header-covid{display: grid;
+grid-template-columns: auto auto;}
+.header-covid img{width: 100%;
+    border-radius: 5px;box-shadow: 0 10px 20 px rgb(0,0,0,.18);
+    height: 400px;
+}.header-comment{position: relative;
+    left:180px ;
+    top: -150px;
+}.header-commentzero{width: 10%;
+height: 150px;}
+.header-commentfive{width: 10%;
+    height: 150px;}
+.header-commentfour{position: relative;
+    left:180px ;
+    top: -150px;}
+.header-comment .date{color: green;}
+
+.header-commentone .date{color: green;}
+
+.header-commentone{position: relative;
+    left:180px ;
+    top: -150px;}
+    .header-commentone .reply{padding-right: 30px;
+    cursor: pointer;
+color: green;}
+.header-commentthree{margin-bottom: 20px;}
+#header-commentsix{width: 40%;
+height: 100px;border-style: 2px solid #3997bf;}
+#header-commentsix:focus, .header-commentseven:focus{color: #3997bf;}
+.header-comment .reply{padding-right: 30px;
+    cursor: pointer;
+color: green;}
