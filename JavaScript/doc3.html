@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">CSS Manimulation with DOM</h1>
+    <button type="button" onclick="move()">Move</button>
+<br><br><img src="js1.png" id="img" width="200" height="200">
+<br><br>
+<img src="js2.webp" id="image" width="300" height="200"
+onmouseover="big()" onmouseout="normal()">
+<p id="p">This is Zero to pro</p>
+<button type="button" onclick="document.querySelector('#p').style.visibility='hidden'">Hide Text</button>
+<button type="button" onclick="document.querySelector('#p').style.visibility='visible'">Show Text</button>
+<script>
+    function move(){
+        let img=document.querySelector('#img');
+        img.style.width='500';
+        img.style.height='520';
+
+        let h1=document.querySelector('#h1');
+        h1.style.color='red';
+        h1.style.backgroundColor='black';}
+        function big(){
+            let image=document.querySelector('#image');
+            image.style.width='550px';
+            image.style.height='350px';
+
+        }
+        function normal(){
+            let image=document.querySelector('#image');
+            image.style.width='300px';
+            image.style.height='200px';
+
+        }
+
+    
+</script>
+</body>
+</html>
