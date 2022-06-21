@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>BMI</title>
+ <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .form{
+            width: 25%;
+            margin-top: 100px;
+            margin: auto;
+        }
+        .form h1{
+            margin-top: 100px;
+            margin-bottom: 10px;
+        }
+        input[type="text"],input[type="number"]{
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            outline:none;
+            border: 1px solid gray;
+        }
+        .span{
+            color: red;
+            font-size: 14px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .calculate{
+            padding: 10px 20px;
+            background-color: gray;
+            outline: none;
+            margin-top: 10px;
+            color: white;
+            border-radius: 5px;
+            border:1px solid gray;}
+        .warning{
+            color: green;
+        }
+        .success{
+            color: blue;
+        }
+        .secondary{
+            color: blueviolet;
+        }
+        .danger{
+            color: aquamarine;
+        }
+        
+    </style>
+</head>
+<body>
+ <form class="form">
+  <h1>BMI Calculator</h1>
+  <div>
+   <label>Weight(lbs)</label>
+   <input type="number" name="" id="lbs">
+   <span class="span" id="weight_error"></span>
+  </div>
+  <div>
+   <label>Foot(ft)</label>
+   <input type="number" name="" id="ft">
+   <span class="span" id="ft_error"></span>   
+  </div>
+  <div>
+   <label>Inches(inc)</label>
+   <input type="number" name="" id="inc">
+   <span class="span" id="inc_error"></span>   
+  </div>
+  <button class="calculate" onclick="show()">Calculate</button>
+ <br><br>
+  <h4 id="bmi"></h4>
+ <h4 id="range"></h4>
+</form>
+ <script>
+    function show(){
+let weight=Number(document.querySelector('#lbs').value);
+console.log(weight);
+let ft=Number(document.querySelector('#ft').value);
+console.log(ft);
+let inc=Number(document.querySelector('#inc').value);
+console.log(inc);
+let height=(ft * 12) + inc;
+console.log(height);
+let weight_error=document.querySelector('#weight_error');
+let ft_error=document.querySelector('#ft_error');
+let inc_error=document.querySelector('#inc_error');
+if(weight == '' || ft == '' || inc ==  ''){
+   if(weight==''){
+    weight_error.innerHTML = 'Weight field is required!';
+   }
+   if(ft == ''){
+    ft_error.innerHTML = 'Foots field is required!';
+   }
+   if(inc == ''){
+    inc_error.innerHTML = 'Inches field is required!';
+   }
+
+}else{
+    weight_error.innerHTML = '';
+    ft_error.innerHTML = '';
+    inc_error.innerHTML='';
+
+let bmi = (weight / (height * height)) * 703;
+console.log(bmi);
+document.querySelector('#bmi').innerHTML= 'BMI = '+bmi.toFixed(1);
+ if(bmi <=18.4) {
+    document.querySelector('#range').innerHTML="You are in the <span class='secondary'>Underweight</span>range";
+ } else if(bmi >=18.5 && bmi<=24.9) {
+    document.querySelector('range').innerHTML="You are in the <span class='success'>Normal</span>range"; 
+}else if(bmi >=25.0 && bmi>=39.9) {
+    document.querySelector('range').innerHTML="You are in the <span class='warning'>Underweight</span>range";
+}else if (bmi>=40){
+    document.querySelector('#range').innerHTML="You are in the <span class='danger'>Obses</span>range";
+}
+
+}}
+ </script>
+</body>
+</html>
