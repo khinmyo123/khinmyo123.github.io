@@ -1,3 +1,9 @@
+create table Salepeople(
+    Snum int Primary key,
+    Sname varchar(50),
+    City varchar(50),
+    Comm decimal(3,2)
+);
 describe Salepeople;
 insert into Salepeople values(1001,'Peel','Landon',.12);
 insert into Salepeople values(1002,'Serres','San Jose',.13);
@@ -6,6 +12,13 @@ insert into Salepeople values(1007,'Rifkin','Barcelona',.15);
 insert into Salepeople values(1003,'Axelrod','New York',.10);
 update Salepeople set Snum=1004 where Comm=.11;
 select * from Salepeople;
+create table Customers(
+    Cnum int Primary key,
+    Cname varchar(50),
+    City varchar(50),
+    Rating int,
+    Snum int
+);
 describe Customers;
 insert into Customers values(2001,'Hoffman','London',100,1001);
 insert into Customers values(2002,'Giovanni','Rome',200,1003);
@@ -15,6 +28,13 @@ insert into Customers values(2006,'Clemens','London',100,1001);
 insert into Customers values(2008,'Cisneros','San Jose',300,1007);
 insert into Customers values(2007,'Pereira','Rome',100,1004);
 select * from Customers;
+create table Orders(
+    Onum int Primary key,
+    Amt decimal(7,2),
+    Odate date,
+    Cnum int,
+    Snum int
+);
 describe Orders;
 insert into Orders values(3001,18.69,1990-10-03,2008,1007);
 insert into Orders values(3003,767.19,1990-10-03,2001,1001);
