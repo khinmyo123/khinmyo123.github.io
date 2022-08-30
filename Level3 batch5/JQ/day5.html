@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .title{
+            font-size: 16px;
+            color: red;
+        }
+    </style>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('#hide').on('click',function(){
+                $("p").hide('slow')
+            })
+
+            $('#show').on('click',function(){
+                $("p").show('slow')
+            })
+            $('#toggle').on('click',function(){
+                $("p").toggle(4000)
+            })
+            $('#fadein').on('click',function(){
+                $("p").fadeIn()
+           })
+           $('#fadeout').on('click',function(){
+                $("p").fadeOut('fast')
+           })
+           $('#fadetoggle').on('click',function(){
+                $("p").fadeToggle(4000)
+           })
+           $('#fadeto').on('click',function(){
+                $("p").fadeTo(1000,0.5)
+           })
+           $('#animate').on('click',function(){
+                $("div").animate({
+                    left:'250px',
+                    height:'+=150px',
+                    width:'+=150px'
+                });
+           })
+           $("#addclass").on("click",function(){
+            $("h2").addClass('title');
+           })
+
+    })
+        
+    </script>
+</head>
+<body>
+    <h2>Hello JQ</h2>
+    <div style="background-color: red;width: 100px;height: 100px;position:relative;"></div>
+    <p>Lorem ipsum dolor sit amet.
+    </p>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="toggle">Toggle</button>
+    <button id="fadein">Fadein</button>
+    <button id="fadeout">Fadeout</button>
+    <button id="fadetoggle">Fadetoggle</button>
+    <button id="fadeto"> Fadeto</button>
+    <button id="animate"> Animate</button>
+
+</body>
+</html>

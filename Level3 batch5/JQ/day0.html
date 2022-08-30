@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            
+            //has p
+             var divp=$("div.foo").has("p")
+             console.log(divp)
+
+             //not bar
+             var bar=$("h1").not(".bar")       
+             console.log(bar)
+
+             //current
+             var current=$("ul li").filter(".current")
+             console.log(current)
+
+             //first li
+             var list=$("ul li:first")
+             console.log(list)
+ 
+             //eq5
+             var six=$("ul li:eq(5)")
+             console.log(six)
+
+             //checked
+             var check=$("form :checked")
+             console.log(check)
+
+             //disabled
+             var dis=$(" form :disabled")
+             console.log(dis)
+
+             //enabled
+             var ena=$("form :enabled")
+             console.log(ena)
+
+
+             //input
+             var inp=$("form :input")
+             console.log(inp)
+
+             //selected
+             var select=$("form :selected")
+             console.log(select)
+
+             
+
+        }
+        )
+    </script>
+</head>
+
+<body>
+    
+    <div>
+        <div class="foo">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>hello</p>
+        </div>
+    </div>
+
+
+    <h1 class="ba">Hi</h1>
+    <h1 class="bar">Hello</h1>
+
+    
+    <ul type="square">
+        <li> Nay Toe</li>
+        <li>Wutt Hmone Shwe Yi</li>
+        <li>Myint Myat</li>
+        <li>Ye Aung</li>
+        <li class="current">Soe Myat Thuzar</li>
+        <li>Min Thway</li>
+        <li>Daung</li>
+    </ul>
+
+     <form>
+    <label for=""Qualification></label>
+    
+        <input type="checkbox" id="highschool">
+        <label for="highschool">High School (10 th )</label>
+    
+        <input type="checkbox" id="higherschool" disabled>
+        <label for="higherschool">Higher School (12 th )</label>
+        <input type="checkbox" id="master">
+        <label for="master">Master</label>
+    
+        <input type="checkbox" id="phd">
+        <label for="phd">PHD</label> 
+         
+    <label for="">Gender</label><br>
+    <input type="radio" name="gender" id="male" value="male">
+    <label for="male">Male</label>
+    <input type="radio" name="gender" id="female">
+    <label for="female">Female</label>
+    <input type="radio" name="gender" id="other" value="other">
+    <label for="other">Other</label>
+    <label for="Select">
+        <input type="text" name="id" value=""></label>
+        <label for="">Submit</label>
+        <input type="button">
+     </form>
+<form action="">
+     <select name="year" id="">
+         <option value="first">First</option>
+         <option value="second">Second</option>
+         <option value="third">Third</option>
+     </select><br>
+    </form>
+    
+        
+    
+
+</body>
+</html>

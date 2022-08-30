@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('input[type=checkbox][name=hobby]').change(function(){
+                if($(this).val()==1){
+                 var playing=   $("#playing")
+                }
+                if($(this).val()==0){
+                    var reading=$("#reading")
+                }
+                if($(this).val()==2){
+                    $("#game").show()
+                }
+            });
+                 $("#myform3").on('submit',function(event){
+                    event.preventDefault()
+                    var name=$("#name").val();
+                    var hobby=$('input[name=hobby]').val();
+                    var reading=$('#reading').val();
+                    
+                  data=""
+                  if(hobby==1){
+                    var hobbies=$("#playing").val();
+                    data +=`${name} is ${playing}`
+                  }alert(data)
+                  if(hobby==0){
+            
+                    data +=`${name} is ${reading}`
+                  }alert(data)
+                  if(hobby==2){
+                    var hobbies=$("#game").val();
+                    data +=`${name} is ${game}`
+                  }alert(data)
+
+                    })
+
+                 })
+    
+    </script>
+</head>
+<body>
+    <form action="" id="myform3">
+        <input type="text" name="name" id="name">
+        <div>Hobbies</div>
+        <input type="checkbox" name="hobby" id="reading" value="0"  >
+        <label for="reading">Reading</label>
+        <input type="checkbox" name="hobby" id="playing " value="1">
+        <label for="playing ">Playing Guitar</label>
+        <input type="checkbox" name="hobby" id="game" value="2">
+        <label for="game">Game</label><br>
+        <input type="submit" value="Save">
+    </form>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function(){
+            $("#myform").on("submit",function(e){
+                e.preventDefault();
+                var name=$("#username").val()
+                alert(name)
+                // var colors=['red','green','blue']//index array(numeric array)
+                //console.log(colors)
+                // $.each(colors,function(i,v){
+                //     console.log(`${i}-${v}`)
+                // })
+                // var student=[
+                //     {name:'susu',age:24},
+                //     {name:'koko',age:32},
+                //      {name:'mgmg',age:44}
+                // ]//array of objects
+                //$.each(student,function(i,v){
+                    //console.log(`${i}-${v.name}`)
+                //})
+                var checkedElements=$("input[name='hobby']:checked")
+                //console.log(checkedevents)
+                var hobbies=[];//declare array
+                $.each(checkedElements,function(i,v){
+                    hobbies.push($(this).val())//for elements
+                })
+               console.log(hobbies)
+               if(hobbies.length>1)
+               alert(`My favourite hobbies are: ${hobbies.join(", ")}`);
+               else
+              alert (`My favourite hobby is: ${hobbies[0]}`);
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <form action="" method="get" id="myform">
+        <input type="text" name="username" id="username"><br>
+        <label for="">Hobbies</label><br>
+        <input type="checkbox" name="hobby" id="reading" value="Reading">
+        <label for="reading">Reading</label>
+        <input type="checkbox" name="hobby" id="football" value="Football" checked>
+        <label for="football">Football</label>
+        <input type="checkbox" name="hobby" id="meditation" value="Meditation">
+         <label for="meditation">Meditation</label><br>
+         <input type="submit" value="Save">
+    </form>
+</body>
+</html>

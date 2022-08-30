@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day Two</title>
+    <script src="jquery.min.js"></script>
+<script>
+    $(function(){
+        $('button').on('click',function(){
+           $('h2').hide('slow',function(){
+
+            alert('ok')
+           })
+           
+
+        })
+        $("a").on('click',function(e){
+            alert('ok')
+            e.preventDefault();
+        })
+        $("#myform").on('submit',function(e){
+            ///alert('clicked save!')
+            var username=$('#username').val()
+            var email=$('input[name="email"]').val()
+            var age=Number($('input[name="age"]').val())
+            //alert(`${username}-${email}`)
+            // if(age<18){
+            //     alert("You can enter into website")
+            //     e.preventDefault()
+            // }
+           var err=false;
+           if(username.length<=5){
+            err=true;
+           }
+           if(age<18){
+            err=true;
+           }
+           if(err==true){
+            e.preventDefault()
+           }
+
+        })
+$("#change").on("focus",function(){
+    var total=Number($("#total").val())
+    var payamount=Number($("#payamount").val())
+    //alert(payamount)
+    var change=payamout - total
+    $(this).val(change)
+})
+$('#major').hide();
+$("#type").on("change",function(){
+   // alert($(this).val())
+   var value=$(this).val()
+   if(value !=1){
+    $("#major").show();
+   }else{
+    $('#major').hide();
+   }
+})
+    })
+</script>
+</head>
+<body>
+    <h2>JQuery Events</h2>
+    <button>Click Here!</button>
+    <a href="http://google.com">Google</a>
+     <form action="" method="get" id="myform">
+        <input type="text" name="username" id="username"><br>
+        <input type="email" name="email" id="email"><br>
+        <input type="number" name="age" id="age"><br>
+        <select name="type" id="type">
+            <optgroup label="Select Type">
+                <option value="1">First Year</option>
+                <option value="2">Second Year</option>
+                <option value="3">Third Year</option>
+                <option value="4">Fourth Year</option>
+                </optgroup>
+            </select>
+            <div id="major">
+                <input type="radio" name="major" id="software">
+                <label for="software">Software</label>
+                <input type="radio" name="major" id="hardware">
+                <label for="hardware">Hardware</label>
+                </div>
+
+
+
+        
+     </form><input type="submit" name="btnsubmit" id="submit" value="save">
+     <form action="" id="myform2">
+        <input type="number" name="total" id="total"><br>
+        <input type="number" name="payamout" id="payamount">
+         <input type="number" name="change" id="change"><br>
+    </form>
+</body>
+</html>

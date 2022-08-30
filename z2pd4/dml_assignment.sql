@@ -9,7 +9,7 @@ insert into Salepeople values(1001,'Peel','Landon',.12);
 insert into Salepeople values(1002,'Serres','San Jose',.13);
 insert into Salepeople values(1003,'Motika','Landon',.11);
 insert into Salepeople values(1007,'Rifkin','Barcelona',.15);
-insert into Salepeople values(1003,'Axelrod','New York',.10);
+insert into Salepeople values(1009,'Axelrod','New York',.10);
 update Salepeople set Snum=1004 where Comm=.11;
 select * from Salepeople;
 create table Customers(
@@ -36,14 +36,14 @@ create table Orders(
     Snum int
 );
 describe Orders;
-insert into Orders values(3001,18.69,1990-10-03,2008,1007);
-insert into Orders values(3003,767.19,1990-10-03,2001,1001);
-insert into Orders values(3002,1900.10,1990-10-03,2007,1004);
-insert into Orders values(3005,5160.45,1990-10-03,2003,1002);
-insert into Orders values(3006,1098.16,1990-10-03,2008,1007);
-insert into Orders values(3009,1713.23,1990-10-04,2002,1003);
-insert into Orders values(3007,75.75,1990-10-04,2004,1002);
-insert into Orders values(3008,4723.00,1990-10-05,2006,1001);
-insert into Orders values(3010,1309.95,1990-10-05,2004,1002);
-insert into Orders values(3011,9891.88,1990-10-06,2006,1001);
+insert into Orders values(3001,18.69,'1990-10-03',2008,1007);
+insert into Orders values(3003,767.19,'1990-10-03',2001,1001);
+insert into Orders values(3002,1900.10,'1990-10-03',2007,1004);
+insert into Orders values(3005,5160.45,'1990-10-03',2003,1002);
+insert into Orders values(3006,1098.16,'1990-10-03',2008,1007);
+insert into Orders values(3009,1713.23,'1990-10-04',2002,1003);
+insert into Orders values(3007,75.75,'1990-10-04',2004,1002);
+insert into Orders values(3008,4723.00,'1990-10-05',2006,1001);
+insert into Orders values(3010,1309.95,'1990-10-05',2004,1002);
+insert into Orders values(3011,9891.88,'1990-10-06',2006,1001);
 select * from Orders;
