@@ -32,8 +32,15 @@
       background-color: antiquewhite;
       padding: 20px;
       margin: 0 auto;
-      display:none;
-    }
+      display:none;}
+      .myitems{
+        display: flex;
+        justify-content:space-between;
+      }
+      .myitems .item img{
+      width: 250px;
+      }
+    
   </style>
 
   <script src="jquery.min.js"></script>
@@ -52,6 +59,29 @@
 
           event.preventDefault();
       })
+      //add to cart
+      $(".addtocart").on("click",function(){
+        //alert('ok')
+        var id=$(this).data('id');
+        var name=$(this).data('name');
+        var price=$(this).data('price');
+        //console.log(`id=>${id}`)
+        var item={
+          id:id,
+          name:name,
+          price:price,
+          qty:1
+        }
+        //console.log(item)
+        var cart=localStorage.getItem('mycart')//string
+        if(!cart){
+          var myArr=[];
+        }else{
+          var myArr=JSON.parse(cart)
+        }
+        myArr.push(item)
+        localStorage.setItem('mycart',JSON.stringify(myArr))
+      })
     })
   </script>
 </head>
@@ -67,6 +97,9 @@
       </li>
       <li>
         <a href="#contact">Contact</a>
+      </li>
+      <li>
+        <a href="#shop">Shop</a>
       </li>
     </ul>
 
@@ -84,6 +117,28 @@
     <div class="content" id="contact">
       <h2>Contact Tab</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, fuga neque autem est fugit placeat mollitia sit ducimus. Quidem voluptatum blanditiis porro excepturi eaque atque ad at officia illo eligendi!</p>
+    </div>
+    <div class="content" id="shop">
+      <h2>Shop Tab</h2>
+    
+    <div class="myitems">
+      <div class="item">
+        <img src="images/img8.jpg" alt="">
+        <p>Price:3,500</p>
+        <button class="addtocart" data-id="1" data-name="Item One" data-price="3500">Add to cart</button>
+      </div>
+      <div class="item">
+      <img src="images/img8.jpg" alt="">
+      <p>Price:5,500</p>
+      <button class="addtocart" data-id="2" data-name="Item Two" data-price="5500">Add to cart</button>
+    </div>
+
+    <div class="item">
+    <img src="images/img8.jpg" alt="">
+    <p>Price:4,000</p>
+    <button class="addtocart" data-id="3" data-name="Item Three" data-price="4000">Add to cart</button>
+  </div>
+    </div>
     </div>
   </div>
 </body>

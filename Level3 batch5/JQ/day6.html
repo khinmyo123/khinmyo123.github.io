@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function(){
+            $("#mybtn").on("click",function(){
+            //getter
+            var attributevalue=$("#mylink").attr('href');
+            var mytext=$("#mylink").text();
+            var name=$("#username").val();
+            console.log(name)
+            //setter
+            $("#mylink").attr('href','http://facebook.com')
+            $("#mylink").text('Go Facebook')
+            $("#username").val('Mg Mg')
+        })
+        //AJAX
+        $.get('https://api.imgflip.com/get_memes',function(response){
+            console.log(response)
+            if(response.success){
+            //    console.log(response.data.memes)
+               var data="";
+               var memes = response.data.memes
+               $.each(memes,function(i,v){
+                data +=`<img src="${v.url}" alt="" width="200" height="200" class="meme"
+                data-boxcount="${v.box_count}" data-id="${v.id}" data-name="${v.name}">`
+
+               })
+               $("#memes").html(data)
+            }
+         })
+          $.post('https://api.imgflip.com/caption_image',
+        {
+            template_id:181913649,
+            username:'khinmyo123',
+            password:'Lovelykhin@@@123',
+            //thetpainghtutfly
+            boxes:[
+                {
+                    'text': 'Hello'
+                },
+                {
+                    'text':"Hi"
+                },
+            ]
+            },
+            function(response){
+                console.log(response)
+                if(response.success){
+        var data=`<img src="${response.data.url}" alt="">`
+             $("#memes").html(data)
+
+                 }
+          })
+          //image click event
+          $('#memes').on('click','.meme',function(){
+            // alert('ok')
+            var id=$(this).data("id")
+            var name=$(this).data("name")
+            var boxcount=$(this).data("boxcount")
+            var photo=$(this).attr('src');
+
+
+            console.log(name);
+          })
+       
+    })
+    </script>
+</head>
+<body>
+    <a href="http://google.com" id="mylink">Google</a>
+    <input type="text" name="username" id="username">
+    <button id="mybtn">Click</button>
+    <div id="memes" style="width: 92em;overflow-x:auto;white-space:nowrap"></div>
+</body>
+</html>

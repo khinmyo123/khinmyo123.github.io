@@ -1,0 +1,42 @@
+*{
+   font-family: 'SourceSanPro-Regular'; 
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'SourceSanPro_Bold';
+}
+.custom_bgcolor{
+    background-color: #0F172B;
+}
+.carousel-item{
+    height: 70vh;
+    object-fit: cover;
+}
+.carousel-item img{
+    height: 70vh;
+    object-fit: cover;
+}
+#joinsection{
+    background: url('../../img/joinbanner.png') no-repeat center center fixed;
+    background-size: cover;
+
+    
+}
+#border{
+    border:solid;
+    border-width: 1px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+/* .rounded float-start{
+    padding-top: 20px;
+} */
+#margin{
+    /* padding-top: 30px; */
+    padding-left: 50px;
+   
+}
+#btn{
+    border: solid;
+    border-width: 1px;
+    
+}
